@@ -211,12 +211,12 @@
 
 		PHImageRequestOptions *phImageRequestOptions = [[PHImageRequestOptions alloc] init];
 		phImageRequestOptions.networkAccessAllowed = YES;
-		phImageRequestOptions.synchronous = NO;
-		phImageRequestOptions.version = PHImageRequestOptionsVersionOriginal;
+		phImageRequestOptions.synchronous = YES;
+		phImageRequestOptions.version = PHImageRequestOptionsVersionCurrent;
 
 		PHVideoRequestOptions *phVideoRequestOptions = [[PHVideoRequestOptions alloc] init];
 		phVideoRequestOptions.networkAccessAllowed = YES;
-		phVideoRequestOptions.version = PHVideoRequestOptionsVersionOriginal;
+		phVideoRequestOptions.version = PHVideoRequestOptionsVersionCurrent;
 
 		for (PHAsset *asset in assets)
 		{
