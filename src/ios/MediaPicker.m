@@ -234,12 +234,33 @@
 					}
 					else
 					{
-						NSString *filePath = [self getWritableFile:@"jpg" isTemporaryStorage:isTemporaryStorage];
+						NSString *extension = @"jpg";
+						if ([dataUTI isEqualToString:(__bridge NSString *)kUTTypeBMP])
+							extension = @"bmp";
+						else if ([dataUTI isEqualToString:(__bridge NSString *)kUTTypeGIF])
+							extension = @"gif";
+						else if ([dataUTI isEqualToString:(__bridge NSString *)kUTTypePNG])
+							extension = @"png";
+						else if ([dataUTI isEqualToString:(__bridge NSString *)kUTTypeTIFF])
+							extension = @"tiff";
+						else if ([dataUTI isEqualToString:@"public.heic"])
+						{
+							extension = @"png";
+							imageData = UIImagePNGRepresentation([UIImage imageWithData:imageData]);
+						}
+
+						NSString *filePath = [self getWritableFile:extension isTemporaryStorage:isTemporaryStorage];
 						NSURL *fileURL = [NSURL fileURLWithPath:filePath isDirectory:NO];
 
-						[imageData writeToFile:filePath atomically:YES];
-						[resultStrings addObject:[fileURL absoluteString]];
+						NSError *error = nil;
+						BOOL success = [imageData writeToFile:filePath options:NSDataWritingFileProtectionNone error:&error];
+						if (!success) {
+							CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:[error localizedDescription]];
+							[self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
+							return;
+						}
 
+						[resultStrings addObject:[fileURL absoluteString]];
 						if ([resultStrings count] == [assets count])
 						{
 							CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:resultStrings];
