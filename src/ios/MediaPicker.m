@@ -245,8 +245,8 @@
 							extension = @"tiff";
 						else if ([dataUTI isEqualToString:@"public.heic"])
 						{
-							extension = @"png";
-							imageData = UIImagePNGRepresentation([UIImage imageWithData:imageData]);
+							extension = @"jpg";
+							imageData = UIImageJPEGRepresentation([UIImage imageWithData:imageData], 1);
 						}
 
 						NSString *filePath = [self getWritableFile:extension isTemporaryStorage:isTemporaryStorage];
