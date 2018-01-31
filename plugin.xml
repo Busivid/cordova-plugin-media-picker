@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<plugin id="cordova-plugin-media-picker" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-media-picker" version="2.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 	<author>Busivid Team</author>
 	<description>Plugin for selecting or capturing multiple images/videos.</description>
 	<engines>
+		<engine name="cordova-android" version=">=7.0.0" />
 		<engine name="cordova-ios" version=">=3.0.0" />
 	</engines>
 	<js-module name="MediaPicker" src="www/MediaPicker.js">
@@ -146,17 +147,17 @@
 		<source-file src="src/android/res/drawable/picker_actionbar_translucent.xml" target-dir="res/drawable" />
 		<source-file src="src/android/res/drawable/picker_photogrid_selector.xml" target-dir="res/drawable" />
 
-		<source-file src="src/android/res/drawable-xhdpi/ab_picker_camera.png" target-dir="res/drawable-xhdpi" />
-		<source-file src="src/android/res/drawable-xhdpi/ab_picker_camera2.png" target-dir="res/drawable-xhdpi" />
-		<source-file src="src/android/res/drawable-xhdpi/ab_picker_video.png" target-dir="res/drawable-xhdpi" />
-		<source-file src="src/android/res/drawable-xhdpi/ab_picker_video_2.png" target-dir="res/drawable-xhdpi" />
-		<source-file src="src/android/res/drawable-xhdpi/ic_picker_imagefail.png" target-dir="res/drawable-xhdpi" />
-		<source-file src="src/android/res/drawable-xhdpi/ic_rotate_left.png" target-dir="res/drawable-xhdpi" />
-		<source-file src="src/android/res/drawable-xhdpi/ic_rotate_right.png" target-dir="res/drawable-xhdpi" />
-		<source-file src="src/android/res/drawable-xhdpi/ic_video_grid.png" target-dir="res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ab_picker_camera.png" target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ab_picker_camera2.png" target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ab_picker_video.png" target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ab_picker_video_2.png" target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_picker_imagefail.png" target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_rotate_left.png" target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_rotate_right.png" target-dir="app/src/main/res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_video_grid.png" target-dir="app/src/main/res/drawable-xhdpi" />
 
-		<source-file src="src/android/res/drawable-xxhdpi/ab_picker_camera.png" target-dir="res/drawable-xxhdpi" />
-		<source-file src="src/android/res/drawable-xxhdpi/ab_picker_video.png" target-dir="res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ab_picker_camera.png" target-dir="app/src/main/res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ab_picker_video.png" target-dir="app/src/main/res/drawable-xxhdpi" />
 
 		<source-file src="src/android/res/layout/activity_mediapicker.xml" target-dir="res/layout" />
 		<source-file src="src/android/res/layout/fragment_mediapicker.xml" target-dir="res/layout" />
