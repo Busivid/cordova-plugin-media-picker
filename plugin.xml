@@ -10,7 +10,7 @@
 		<clobbers target="cordova.plugins.MediaPicker" />
 	</js-module>
 	<license>MIT</license>
-	<name>cordova-plugin-media-picker</name>	
+	<name>cordova-plugin-media-picker</name>
 	<platform name="android">
 		<config-file target="AndroidManifest.xml" parent="/*">
 			<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -35,7 +35,7 @@
 			</feature>
 		</config-file>
 
-		<framework src="com.android.support:appcompat-v7:+"/>
+		<framework src="com.android.support:appcompat-v7:27.1.0"/>
 
 		<source-file src="src/android/com/busivid/cordova/mediapicker/CropListener.java" target-dir="src/com/busivid/cordova/mediapicker" />
 		<source-file src="src/android/com/busivid/cordova/mediapicker/MediaAdapter.java" target-dir="src/com/busivid/cordova/mediapicker" />
@@ -202,10 +202,10 @@
 
 		<source-file src="src/ios/QBImagePicker/QBAlbumCell.m" />
 		<source-file src="src/ios/QBImagePicker/QBAlbumsViewController.m" />
-		<source-file src="src/ios/QBImagePicker/QBAssetCell.m" />		
+		<source-file src="src/ios/QBImagePicker/QBAssetCell.m" />
 		<source-file src="src/ios/QBImagePicker/QBCheckmarkView.m" />
 		<source-file src="src/ios/QBImagePicker/QBImagePickerController.m" />
-		<source-file src="src/ios/QBImagePicker/QBItemCell.m" />		
+		<source-file src="src/ios/QBImagePicker/QBItemCell.m" />
 		<source-file src="src/ios/QBImagePicker/QBItemViewController.m" />
 		<source-file src="src/ios/QBImagePicker/QBSlomoIconView.m" />
 		<source-file src="src/ios/QBImagePicker/QBVideoIconView.m" />
@@ -218,7 +218,7 @@
 		<!--<resource-file src="src/ios/QBImagePicker/ja.lproj/QBImagePicker.strings" />-->
 		<!--<resource-file src="src/ios/QBImagePicker/pl.lproj/QBImagePicker.strings" />-->
 		<!--<resource-file src="src/ios/QBImagePicker/zh-Hans.lproj/QBImagePicker.strings" />-->
-		<resource-file src="src/ios/QBImagePicker/QBImagePicker.storyboard" />		
+		<resource-file src="src/ios/QBImagePicker/QBImagePicker.storyboard" />
 		<resource-file src="src/ios/QBImagePicker/QBItemCell.xib" />
 	</platform>
 </plugin>
